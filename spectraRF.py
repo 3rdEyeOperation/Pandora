@@ -1,3 +1,34 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Drone Detection System (HackRF via SoapySDR)
+
+Owner: 3rd Eye Operation
+Description:
+    This software implements a Software-Defined Radio (SDR) based drone 
+    detection system using HackRF with SoapySDR. It performs frequency sweeps, 
+    captures I/Q samples, computes FFT spectra, and applies lightweight 
+    machine-learning-style heuristics to classify potential drone signals 
+    (DJI, Autel, FPV, Wi-Fi interference, or unknown). 
+
+    Features include:
+    - Frequency sweeping over configurable bands
+    - Power spectrum analysis and bandwidth estimation
+    - Signal-to-noise ratio (SNR) calculation
+    - Basic signal classification and confidence scoring
+    - Logging of detections with timestamp and metadata
+    - Simulation mode when no SDR hardware is present
+
+Copyright:
+    © 2025 3rd Eye Operation. All rights reserved.
+    Unauthorized copying, modification, or distribution of this software, 
+    via any medium, is strictly prohibited unless with express permission 
+    from 3rd Eye Operation. 
+
+License:
+    Proprietary — For research, training, and authorized operational use only.
+"""
+
 import SoapySDR
 from SoapySDR import *  # SOAPY_SDR_ constants
 import numpy as np
